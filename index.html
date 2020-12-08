@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackman - Rock Paper Scissors</title>
+    <link rel="stylesheet" href="CSS/index.css">
+</head>
+<body>
+    <button id="resetButton" onclick="reset()">reset</button>
+    <h2 id="helpMessage">Click reset to try again.</h2>
+
+    <div id="bestOfChoice">
+        <h1>Best of:</h1>
+        <br>
+        <button onclick="bestOf3()" id="Button3">3</button>
+        <button onclick="bestOf5()" id="Button5">5</button>
+        <button onclick="bestOf7()" id="Button7">7</button>
+    </div>
+
+    <div id="winLoseMessage">
+        <h1 id="winMessage"></h1>
+    </div>
+
+    <div id="Choices">
+        <div id="playerChoice">
+            <h1>Your Choice:</h1>
+            <img id="pChoice" src="Images/blank.png">
+        </div>
+        <div id="choice1">
+            <img src="Images/rock.png" alt="Rock" onclick="choseRock()" id="rockImg" class="hover">
+        </div>
+        <div id="choice2">
+            <img src="Images/paper.png" alt="Paper" onclick="chosePaper()" id="paperImg" class="hover">
+        </div>
+        <div id="choice3">
+            <img src="Images/scissors.png" alt="scissors" onclick="choseScissors()" id="scissorsImg" class="hover">
+        </div>
+
+        <div id="computerChoice">
+            <h1 style="padding: 0px;">CPU Choice:</h1>
+            <img id="cChoice" src="Images/blank.png">
+        </div>
+    </div>
+
+    <div id="confirmButton">
+        <button onclick="playRockPaperScissors()" id="confirm">Confirm</button>
+    </div>
+
+    <div id="playerScore">
+        <h1>Player Score:</h1>
+        <div id="playerScoreNumber">
+            <h1 id="pScore">0</h1>
+        </div>
+    </div>
+
+    <div id="computerScore">
+        <h1>CPU Score:</h1>
+        <div id="computerScoreNumber">
+            <h1 id="cScore">0</h1>
+        </div>
+    </div>
+    <script src="JS/index.js"></script>
+</body>
+</html>
